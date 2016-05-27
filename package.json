@@ -6,6 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "co": "4.6.0",
+    "commander": "2.9.0",
+    "duniter": "0.20.0a78",
+    "request-promise": "3.0.0"
+  },
   "author": "",
   "license": "GPLv3"
 }
