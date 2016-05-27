@@ -22,15 +22,14 @@ module.exports = (angular) => {
             console.log('onerror');
             console.log(e);
           };
-          let opened = false, openedCallback;
-          sock.onopen = function() {
-            opened = true;
-            openedCallback && openedCallback();
-          };
+          let defered = Q.defer();
+          let openPromise = defered.promise;
+          sock.onopen = () => defered.resolve();
           sock.onmessage = function(e) {
             listener(JSON.parse(e.data));
           };
           return {
+            openPromise: openPromise,
             send: (msg) => sock.send(msg)
           };
         }
