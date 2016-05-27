@@ -1,0 +1,26 @@
+nav
+  .nav-wrapper
+    a.brand-logo {{ 'main.logo.title' | translate }}
+    //ul#nav-mobile.right.hide-on-small-and-down
+    //  li: a
+
+div.home-main
+  .container
+    .row
+      .col.s12
+        .card-panel.head
+          span.white-text {{ 'main.head.title' | translate }}
+    .row
+      .col.s12.m8
+        ul.collection.with-header
+          li.collection-header: h4 {{ 'main.blocks.title' | translate }}
+          li.collection-item.avatar(ng-repeat="b in blocks | orderBy : 'number' : true")
+            i.fa.fa-cube
+            span.block-title Block {{ '#' + b.number }}
+            p
+              h5.paid.right.chip(ng-if="b.amount")
+                span Received 
+                span.amount {{ b.amount }}
+                span units as tip
+              span.issuer-title Issuer: 
+              span.issuer {{ b.issuer.substr(0,8) }}

@@ -1,0 +1,53 @@
+{
+  "plugins": [
+    "mocha"
+  ],
+//  "ecmaFeatures": {
+//    "arrowFunctions": true,
+//    "generators": true
+//  },
+  "rules": {
+
+    "curly": 0,
+    "camelcase": 0,
+    "new-cap": 0,
+    "eqeqeq": 0,
+    "key-spacing": 0,
+    "no-multi-spaces": 0,
+    "no-use-before-define": 0,
+    "no-underscore-dangle": 0,
+    "no-extend-native": 0,
+    "no-loop-func": 0,
+    "no-redeclare": 0,
+    "no-trailing-spaces": 0,
+    "no-unused-expressions": 0,
+    "comma-spacing": 0,
+
+    "quotes": [0, "double"],
+    "linebreak-style": [2,"unix"],
+    "mocha/no-exclusive-tests": 2,
+    "no-undef": [2],
+
+    "no-process-exit": [1],
+    "indent": [1,2],
+    "no-eval": [1],
+    "comma-dangle": [1],
+    "eol-last": [1],
+    "no-shadow": [1],
+    "no-unused-vars": [1],
+    "space-infix-ops": [1],
+    "handle-callback-err": [1],
+    "semi": [1,"always"],
+    "no-extra-semi": [1]
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "before": true,
+    "after": true,
+    "describe": true,
+    "it": true
+  }
+}

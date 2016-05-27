@@ -1,0 +1,10 @@
+main
+  .container
+    .row
+      .s12.center
+        .card.orange.darken-1
+          .card-content.white-text
+            i.material-icons.medium error
+            p {{ errorMsg | translate }}
+          .card-action
+            .row: a.btn-large.orange.darken-3.waves-light.waves-effect(href="#/" translate="err.back_index")

@@ -1,0 +1,24 @@
+{
+  "name": "simple-brunch",
+  "version": "0.1.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.0.3",
+    "angular": "1.2.5",
+    "angular-sanitize": "1.2.5",
+    "angular-resource": "1.2.5",
+    "angular-cookies": "1.2.5",
+    "angular-ui-router": "0.2.18",
+    "angular-translate": "2.10.0"
+  },
+  "resolutions": {
+    "angular": "1.2.5"
+  }
+}
