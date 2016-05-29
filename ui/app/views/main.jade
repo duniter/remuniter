@@ -11,15 +11,20 @@ div.home-main
         .card
           .card-content.head.white
             span {{ 'main.main.card.key' | translate }}&nbsp;
-            span.issuer {{ remun_key }}
-          .card-action.head
-            span {{ 'main.main.card.pays' | translate }}&nbsp;
-            span.issuer {{ pay_per_block }} {{ unit }}
-            span &nbsp;{{ 'main.main.card.to' | translate }}&nbsp;
+            span.issuer {{ remun_key.substr(0,8) }}
+            span &nbsp;{{ 'main.main.card.pays' | translate }}
+            span.issuer {{ pay_per_block }}&nbsp;{{ unit }}
+            span &nbsp;{{ 'main.main.card.to' | translate }}
           .card-action.head
             span {{ 'main.main.card.remains' | translate }}&nbsp;
-            span.issuer {{ remains }} {{ unit }}
-            span &nbsp;{{ 'main.main.card.to_distribute' | translate }}&nbsp;
+            span.issuer {{ remains }}&nbsp;{{ unit }}
+            span &nbsp;{{ 'main.main.card.to_distribute' | translate }}
+            span.issuer {{ 'main.main.card.approx' | translate }}{{ remains_days }} {{ 'main.main.card.to_distribute_unit' | translate }}
+            span {{ 'main.main.card.to_distribute_days' | translate }}
+          .card-action.head.donate
+            span {{ 'main.main.card.feed' | translate }}&nbsp;
+            span.issuer {{ remun_key }}
+            span {{ 'main.main.card.to_increase_stock' | translate }}
     .row
       .col.s12.m6
         ul.collection.with-header
@@ -38,7 +43,7 @@ div.home-main
         .row
           ul.collection.with-header.topx
             li.collection-header: h4 {{ 'main.top1.title' | translate }}
-            li.collection-item.avatar(ng-repeat="user in top1 | orderBy : 'paid' : true")
+            li.collection-item.avatar(ng-repeat="user in top1 | orderBy : 'blocks' : true")
               i.fa.fa-user
               span.issuer {{ user.blocks }}
               span.issuer-title &nbsp;blocks
@@ -49,7 +54,7 @@ div.home-main
                   span.amount {{ 'main.earned' | translate }} {{ user.paid }} {{ unit }}
           ul.collection.with-header.topx
             li.collection-header: h4 {{ 'main.top2.title' | translate }}
-            li.collection-item.avatar(ng-repeat="user in top2 | orderBy : 'paid' : true")
+            li.collection-item.avatar(ng-repeat="user in top2 | orderBy : 'blocks' : true")
               i.fa.fa-user
               span.issuer {{ user.blocks }}
               span.issuer-title &nbsp;blocks

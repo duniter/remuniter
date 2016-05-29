@@ -1,13 +1,17 @@
 {
   "main.logo.title": "Remuniter",
-  "main.head.title": "Hmmm... what is this? Secret?",
   "main.top1.title": "Last 24h",
   "main.top2.title": "Last 7 days",
   "main.blocks.title": "Last computed blocks",
   "main.earned": "+",
   "main.main.card.key": "The key",
-  "main.main.card.pays": "pays",
-  "main.main.card.to": "to the issuer of each block",
-  "main.main.card.remains": "it remains",
-  "main.main.card.to_distribute": "to distribute this way"
+  "main.main.card.pays": "pays ",
+  "main.main.card.to": "to the issuer of each block.",
+  "main.main.card.remains": "It remains",
+  "main.main.card.to_distribute": "to distribute this way (",
+  "main.main.card.approx": "~",
+  "main.main.card.to_distribute_unit": "days",
+  "main.main.card.to_distribute_days": ").",
+  "main.main.card.feed": "Send money to ",
+  "main.main.card.to_increase_stock": " to remunerate future issuers!"
 }

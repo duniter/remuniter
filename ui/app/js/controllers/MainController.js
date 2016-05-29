@@ -4,6 +4,7 @@ const co = require('co');
 
 module.exports = ($scope, $http, $state, WS) => {
 
+  $scope.remains_days = '';
   $scope.unit = 'units';
   $scope.blocks = [];
   $scope.top1 = [];
@@ -12,6 +13,7 @@ module.exports = ($scope, $http, $state, WS) => {
   let socket = WS.block((data) => {
     $scope.remun_key = data.key;
     $scope.remains = data.remains;
+    $scope.remains_days = data.remains_days;
     $scope.pay_per_block = data.pay_per_block;
     $scope.unit = data.unit;
     $scope.blocks = data.blocks;
