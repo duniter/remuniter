@@ -8,8 +8,18 @@ div.home-main
   .container
     .row
       .col.s12
-        .card-panel.head
-          span.white-text {{ 'main.head.title' | translate }}
+        .card
+          .card-content.head.white
+            span {{ 'main.main.card.key' | translate }}&nbsp;
+            span.issuer {{ remun_key }}
+          .card-action.head
+            span {{ 'main.main.card.pays' | translate }}&nbsp;
+            span.issuer {{ pay_per_block }} {{ unit }}
+            span &nbsp;{{ 'main.main.card.to' | translate }}&nbsp;
+          .card-action.head
+            span {{ 'main.main.card.remains' | translate }}&nbsp;
+            span.issuer {{ remains }} {{ unit }}
+            span &nbsp;{{ 'main.main.card.to_distribute' | translate }}&nbsp;
     .row
       .col.s12.m6
         ul.collection.with-header
@@ -28,7 +38,7 @@ div.home-main
         .row
           ul.collection.with-header.topx
             li.collection-header: h4 {{ 'main.top1.title' | translate }}
-            li.collection-item.avatar(ng-repeat="user in top1 | orderBy : 'amount' : true")
+            li.collection-item.avatar(ng-repeat="user in top1 | orderBy : 'paid' : true")
               i.fa.fa-user
               span.issuer {{ user.blocks }}
               span.issuer-title &nbsp;blocks
@@ -39,7 +49,7 @@ div.home-main
                   span.amount {{ 'main.earned' | translate }} {{ user.paid }} {{ unit }}
           ul.collection.with-header.topx
             li.collection-header: h4 {{ 'main.top2.title' | translate }}
-            li.collection-item.avatar(ng-repeat="user in top2 | orderBy : 'amount' : true")
+            li.collection-item.avatar(ng-repeat="user in top2 | orderBy : 'paid' : true")
               i.fa.fa-user
               span.issuer {{ user.blocks }}
               span.issuer-title &nbsp;blocks

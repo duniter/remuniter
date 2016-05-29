@@ -10,6 +10,9 @@ module.exports = ($scope, $http, $state, WS) => {
   $scope.top2 = [];
 
   let socket = WS.block((data) => {
+    $scope.remun_key = data.key;
+    $scope.remains = data.remains;
+    $scope.pay_per_block = data.pay_per_block;
     $scope.unit = data.unit;
     $scope.blocks = data.blocks;
     $scope.top1 = data.top1;
