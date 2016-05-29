@@ -1,0 +1,17 @@
+{
+  "main.logo.title": "Remuniter",
+  "main.top1.title": "Dernières 24h",
+  "main.top2.title": "Derniers 7 jours",
+  "main.blocks.title": "Derniers blocs calculés",
+  "main.earned": "+",
+  "main.main.card.key": "La clé",
+  "main.main.card.pays": "paye ",
+  "main.main.card.to": "à l'émetteur de chaque bloc.",
+  "main.main.card.remains": "Il reste",
+  "main.main.card.to_distribute": "à distribuer de cette façon (",
+  "main.main.card.approx": "~",
+  "main.main.card.to_distribute_unit": "jours",
+  "main.main.card.to_distribute_days": ").",
+  "main.main.card.feed": "Envoyez de la monnaie à la clé ",
+  "main.main.card.to_increase_stock": " pour que la distribution perdure passé ce délai !"
+}
