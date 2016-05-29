@@ -11,7 +11,7 @@ div.home-main
         .card-panel.head
           span.white-text {{ 'main.head.title' | translate }}
     .row
-      .col.s12.m8
+      .col.s12.m6
         ul.collection.with-header
           li.collection-header: h4 {{ 'main.blocks.title' | translate }}
           li.collection-item.avatar(ng-repeat="b in blocks | orderBy : 'number' : true")
@@ -23,4 +23,28 @@ div.home-main
                 span.amount {{ b.amount }}
                 span units as tip
               span.issuer-title Issuer: 
-              span.issuer {{ b.issuer.substr(0,8) }}
+              span.issuer {{ b.uid }}
+      .col.s12.m6
+        .row
+          ul.collection.with-header.topx
+            li.collection-header: h4 {{ 'main.top1.title' | translate }}
+            li.collection-item.avatar(ng-repeat="user in top1 | orderBy : 'amount' : true")
+              i.fa.fa-user
+              span.issuer {{ user.blocks }}
+              span.issuer-title &nbsp;blocks
+              span.issuer-title &nbsp;by&nbsp;
+              span.issuer {{ user.name }}
+              p
+                h5.paid.right.chip(ng-if="user.paid")
+                  span.amount {{ 'main.earned' | translate }} {{ user.paid }} {{ unit }}
+          ul.collection.with-header.topx
+            li.collection-header: h4 {{ 'main.top2.title' | translate }}
+            li.collection-item.avatar(ng-repeat="user in top2 | orderBy : 'amount' : true")
+              i.fa.fa-user
+              span.issuer {{ user.blocks }}
+              span.issuer-title &nbsp;blocks
+              span.issuer-title &nbsp;by&nbsp;
+              span.issuer {{ user.name }}
+              p
+                h5.paid.right.chip(ng-if="user.paid")
+                  span.amount {{ 'main.earned' | translate }} {{ user.paid }} {{ unit }}
