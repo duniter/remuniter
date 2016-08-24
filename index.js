@@ -46,7 +46,7 @@ if (duniter_subcommand) {
   /**
    * Forward command to Duniter
    */
-  let duniterbin = path.resolve(path.dirname(process.argv[1]), './node_modules/duniter/bin/ucoind');
+  let duniterbin = path.resolve(path.dirname(process.argv[1]), './node_modules/duniter/bin/duniter');
   let duniter_spawn = spawn(process.argv[0], [duniterbin].concat(process.argv.slice(2)).concat(['--mdb', HOME_DUNITER_DATA_FOLDER]));
 
   process.stdin.pipe(duniter_spawn.stdin);
