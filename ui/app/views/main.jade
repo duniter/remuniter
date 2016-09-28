@@ -31,7 +31,7 @@ div.home-main
           li.collection-header: h4 {{ 'main.blocks.title' | translate }}
           li.collection-item.avatar(ng-repeat="b in blocks | orderBy : 'number' : true")
             i.fa.fa-cube
-            span.block-title Block {{ '#' + b.number }}
+            span.block-title Block {{ '#' + b.number + '-' + b.hash.slice(0, 8) }}
             p
               h5.paid.right.chip(ng-if="b.amount")
                 span Received 
