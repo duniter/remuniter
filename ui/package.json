@@ -22,6 +22,7 @@
     "underscore": "1.8.3"
   },
   "scripts": {
+    "postinstall": "node \"node_modules/bower/bin/bower\" install --allow-root && node \"node_modules/brunch/bin/brunch\" build",
     "brunch": "node \"node_modules/bower/bin/bower\" install --allow-root && node \"node_modules/brunch/bin/brunch\" build",
     "brunch-build": "node \"node_modules/brunch/bin/brunch\" build",
     "brunch-w": "node \"node_modules/brunch/bin/brunch\" watch --server"
