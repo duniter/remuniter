@@ -40,10 +40,10 @@ const stack = duniter.statics.autoStack([{
     duniter: {
 
       cliOptions: [
-        { value: '--payperiod <seconds>',     desc: 'Number of seconds between each pay loop (default ' + PAY_PERIOD + ').'},
-        { value: '--paychunk <chunk_size>',   desc: 'Number of blocks paid in each loop (default ' + PAY_CHUNK_LENGTH + ').'},
-        { value: '--paystart <block_number>', desc: 'Block number from which we pay issuers (default ' + PAY_START_BLOCK + ').'},
-        { value: '--payperblock <amount>',    desc: 'Amount paid per block issued (default ' + PAY_PER_BLOCK + ').'},
+        { value: '--payperiod <seconds>',     desc: 'Number of seconds between each pay loop (default ' + PAY_PERIOD + ').',     parser: (v) => parseInt(v) },
+        { value: '--paychunk <chunk_size>',   desc: 'Number of blocks paid in each loop (default ' + PAY_CHUNK_LENGTH + ').',    parser: (v) => parseInt(v) },
+        { value: '--paystart <block_number>', desc: 'Block number from which we pay issuers (default ' + PAY_START_BLOCK + ').', parser: (v) => parseInt(v) },
+        { value: '--payperblock <amount>',    desc: 'Amount paid per block issued (default ' + PAY_PER_BLOCK + ').',             parser: (v) => parseInt(v) },
         { value: '--nopay',                   desc: 'Disable Remuniter pay loop (equivalent to --payperiod 0).'}
       ],
 
