@@ -13,9 +13,9 @@ module.exports = ($scope, $http, $state, WS) => {
 
   let socket = WS.block((data) => {
     $scope.remun_key = data.key;
-    $scope.remains = data.remains;
+    $scope.remains = String(parseInt(data.remains / 100).toFixed(2)).replace('.', ',');
     $scope.remains_days = data.remains_days;
-    $scope.pay_per_block = data.pay_per_block * Math.pow(10, data.unitbase);
+    $scope.pay_per_block = String(data.pay_per_block / Math.pow(10, data.unitbase) / 100).replace('.', ',');
     $scope.unit = data.unit;
     $scope.blocks = data.blocks;
     $scope.top1 = data.top1;
