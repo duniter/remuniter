@@ -16,6 +16,9 @@ module.exports = (app) => {
     state('main', {
       url: '/',
       template: require('views/main'),
+      resolve: {
+        blocksTranslation: ($translate) => $translate('general.blocks')
+      },
       controller: 'MainController'
     }).
       

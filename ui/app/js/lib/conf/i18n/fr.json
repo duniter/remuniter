@@ -1,6 +1,7 @@
 {
+  "general.blocks": "blocs",
   "main.logo.title": "Remuniter",
-  "main.top1.title": "Dernières 24h",
+  "main.top1.title": "Fenêtre courante",
   "main.top2.title": "Derniers 7 jours",
   "main.blocks.title": "Derniers blocs calculés",
   "main.earned": "+",
