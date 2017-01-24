@@ -51,7 +51,7 @@ div.home-main
               span.issuer {{ user.name }}
               p
                 h5.paid.right.chip(ng-if="user.paid")
-                  span.amount {{ 'main.earned' | translate }} {{ user.paid }} {{ unit }}
+                  span.amount {{ 'main.earned' | translate }} {{ (user.paid / 100).toFixed(2) }} {{ unit }}
           ul.collection.with-header.topx
             li.collection-header: h4 {{ 'main.top2.title' | translate }}
             li.collection-item.avatar(ng-repeat="user in top2 | orderBy : 'blocks' : true")
@@ -62,4 +62,4 @@ div.home-main
               span.issuer {{ user.name }}
               p
                 h5.paid.right.chip(ng-if="user.paid")
-                  span.amount {{ 'main.earned' | translate }} {{ user.paid }} {{ unit }}
+                  span.amount {{ 'main.earned' | translate }} {{ (user.paid / 100).toFixed(2) }} {{ unit }}
