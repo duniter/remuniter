@@ -27,6 +27,18 @@ div.home-main
             span {{ 'main.main.card.to_increase_stock' | translate }}
     .row
       .col.s12.m6
+        ul.collection.with-header.topx
+          li.collection-header: h4 {{ 'main.donations.title' | translate }}
+          li.collection-item.avatar(ng-repeat="gift in topgifts | orderBy : 'blocks' : true")
+            i.fa.fa-gift
+            span.issuer {{ (gift.amount / 100).toFixed(2).replace('.', ',') }} {{ unit }}
+            span.issuer-title &nbsp;on&nbsp;
+            span.issuer {{ gift.date }}
+            span.issuer-title &nbsp;by&nbsp;
+            span.issuer {{ gift.issuer }}
+            p
+              h5.paid.right.chip(ng-if="user.paid")
+                span.amount {{ 'main.earned' | translate }} {{ (user.paid / 100).toFixed(2) }} {{ unit }}
         ul.collection.with-header
           li.collection-header: h4 {{ 'main.blocks.title' | translate }}
           li.collection-item.avatar(ng-repeat="b in blocks | orderBy : 'number' : true")
@@ -34,10 +46,10 @@ div.home-main
             span.block-title Block {{ '#' + b.number + '-' + b.hash.slice(0, 8) }}
             p
               h5.paid.right.chip(ng-if="b.amount")
-                span Received 
+                span Received&nbsp;
                 span.amount {{ b.amount }}
                 span units as tip
-              span.issuer-title Issuer: 
+              span.issuer-title Issuer:&nbsp;
               span.issuer {{ b.uid }}
       .col.s12.m6
         .row

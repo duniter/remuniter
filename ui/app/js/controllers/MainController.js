@@ -21,6 +21,7 @@ module.exports = ($scope, $http, $state, WS, blocksTranslation) => {
     $scope.blocks = data.blocks;
     $scope.top1 = data.top1;
     $scope.top2 = data.top2;
+    $scope.topgifts = data.topgifts;
     try {
       $scope.$apply();
     } catch (e) {
