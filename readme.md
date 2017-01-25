@@ -5,11 +5,7 @@ Requires Node.js v6+
 ## Installation (with Yarn)
 
     git clone https://github.com/duniter/remuniter.git
-    cd remuniter
-    yarn install
-    cd ui
-    yarn install
-    cd ..
+    cd remuniter && yarn install && cd ui && yarn install && cd ..
     node index.js config --autoconf
     node index.js sync duniter.org 8999
     node index.js remuniter
