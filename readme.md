@@ -6,12 +6,12 @@ Requires Node.js v5.12.0
 
     git clone https://github.com/duniter/remuniter.git
     cd remuniter
-    npm install
+    yarn install
     cd ui
-    npm install
+    yarn install
     cd ..
     node index.js config --autoconf
     node index.js sync duniter.org 8999
-    node index.js start
+    node index.js remuniter
 
 Then, visit http://localhost:8555.
