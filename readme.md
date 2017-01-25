@@ -1,8 +1,8 @@
 # Remuniter
 
-Requires Node.js v5.12.0
+Requires Node.js v6+
 
-## Installation
+## Installation (with Yarn)
 
     git clone https://github.com/duniter/remuniter.git
     cd remuniter
