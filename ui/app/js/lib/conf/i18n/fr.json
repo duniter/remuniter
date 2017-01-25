@@ -1,6 +1,7 @@
 {
   "general.blocks": "blocs",
   "main.logo.title": "Remuniter",
+  "main.donations.title": "Derniers dons à Remuniter",
   "main.top1.title": "Fenêtre courante",
   "main.top2.title": "Derniers 7 jours",
   "main.blocks.title": "Derniers blocs calculés",

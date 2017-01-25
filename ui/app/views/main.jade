@@ -31,8 +31,8 @@ div.home-main
           li.collection-header: h4 {{ 'main.donations.title' | translate }}
           li.collection-item.avatar(ng-repeat="gift in topgifts | orderBy : 'blocks' : true")
             i.fa.fa-gift
-            span.issuer {{ (gift.amount / 100).toFixed(2).replace('.', ',') }} {{ unit }}
-            span.issuer-title &nbsp;on&nbsp;
+            span.issuer {{ (gift.amount / 100).toFixed(2).replace('.', ',').lpad("&nbsp;", digits) }} {{ unit }}
+            span.issuer-title &nbsp;–&nbsp;
             span.issuer {{ gift.date }}
             span.issuer-title &nbsp;by&nbsp;
             span.issuer {{ gift.issuer }}
@@ -46,7 +46,7 @@ div.home-main
             span.block-title Block {{ '#' + b.number + '-' + b.hash.slice(0, 8) }}
             p
               h5.paid.right.chip(ng-if="b.amount")
-                span Received&nbsp;
+                span Received
                 span.amount {{ b.amount }}
                 span units as tip
               span.issuer-title Issuer:&nbsp;
