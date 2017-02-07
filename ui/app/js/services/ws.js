@@ -35,7 +35,7 @@ module.exports = (angular) => {
         }
 
         return {
-          block: (f) => ws('ws://' + server + '/ws/block', f)
+          block: (f) => ws(wsProtocol() + server + '/ws/block', f)
         }
       }
       let server = conf.server || window.location.hostname;
@@ -45,3 +45,7 @@ module.exports = (angular) => {
       return service;
     });
 };
+
+function wsProtocol() {
+  return window.location.protocol.match(/^https/) ? 'wss://' : 'ws://';
+}
