@@ -13,6 +13,7 @@ module.exports = ($scope, $http, $state, WS, issuersTranslation, blocksTranslati
 
   let socket = WS.block((data) => {
     $scope.current_window = '(' + data.issuersCount + ' ' + issuersTranslation + ', ' + data.issuersFrame + ' ' + blocksTranslation + ')';
+    $scope.issuers_week = '(' + data.issuersWeek + ' ' + issuersTranslation + ')';
     $scope.remun_key = data.key;
     $scope.remains = String(parseInt(data.remains / 100).toFixed(2)).replace('.', ',');
     $scope.remains_days = data.remains_days;
