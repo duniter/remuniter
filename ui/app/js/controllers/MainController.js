@@ -2,7 +2,7 @@
 
 const co = require('co');
 
-module.exports = ($scope, $http, $state, WS, blocksTranslation) => {
+module.exports = ($scope, $http, $state, WS, issuersTranslation, blocksTranslation) => {
 
   $scope.remains_days = '';
   $scope.unit = 'units';
