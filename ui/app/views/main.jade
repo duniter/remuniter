@@ -59,11 +59,15 @@ div.home-main
               i.fa.fa-user
               span.issuer {{ user.blocks }}
               span.issuer-title &nbsp;blocks
-              span.issuer-title &nbsp;by&nbsp;
-              span.issuer {{ user.name }}
-              span.issuer-title (&nbsp;handicap:
+              span.issuer-title &nbsp;(diff:
+              span.issuer {{ user.diff }}
+              span.issuer-title ,&nbsp;exFact:
+              span.issuer {{ user.exclusionFactor }}
+              span.issuer-title ,&nbsp;handicap:
               span.issuer {{ user.handicap }}
               span.issuer-title )
+              span.issuer-title &nbsp;by&nbsp;
+              span.issuer {{ user.name }}
               p
                 h5.paid.right.chip(ng-if="user.paid")
                   span.amount {{ 'main.earned' | translate }} {{ (user.paid / 100).toFixed(2) }} {{ unit }}
