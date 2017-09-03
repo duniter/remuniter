@@ -61,11 +61,14 @@ div.home-main
               span.issuer-title &nbsp;blocks
               span.issuer-title &nbsp;by&nbsp;
               span.issuer {{ user.name }}
+              span.issuer-title (&nbsp;handicap:
+              span.issuer {{ user.handicap }}
+              span.issuer-title )
               p
                 h5.paid.right.chip(ng-if="user.paid")
                   span.amount {{ 'main.earned' | translate }} {{ (user.paid / 100).toFixed(2) }} {{ unit }}
           ul.collection.with-header.topx
-            li.collection-header: h4 {{ 'main.top2.title' | translate }}
+            li.collection-header: h4 {{ 'main.top2.title' | translate }} {{ issuers_week }}
             li.collection-item.avatar(ng-repeat="user in top2 | orderBy : 'blocks' : true")
               i.fa.fa-user
               span.issuer {{ user.blocks }}
