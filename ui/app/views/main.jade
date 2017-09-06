@@ -57,7 +57,7 @@ div.home-main
             li.collection-header: h4 {{ 'main.top1.title' | translate }} {{ current_window }}
             li.collection-item.avatar(ng-repeat="user in top1 | orderBy : 'blocks' : true")
               i.fa.fa-user
-              span.issuer {{ user.blocks }}
+              span.issuer {{ user.stringBlocks }}
               span.issuer-title &nbsp;blocks
               span.issuer-title &nbsp;(diff:
               span.issuer {{ user.diff }}
