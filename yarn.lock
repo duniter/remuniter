@@ -312,6 +312,10 @@ chalk@^1.0.0:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
+"charenc@>= 0.0.1":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
+
 charm@~0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/charm/-/charm-0.1.2.tgz#06c21eed1a1b06aeb67553cdc53e23274bac2296"
@@ -439,6 +443,10 @@ crc@^3.4.4:
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/crc/-/crc-3.4.4.tgz#9da1e980e3bd44fc5c93bf5ab3da3378d85e466b"
 
+"crypt@>= 0.0.1":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
+
 cryptiles@2.x.x:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/cryptiles/-/cryptiles-2.0.5.tgz#3bdfecdc608147c1c67202fa291e7dca59eaa3b8"
@@ -515,7 +523,7 @@ dicer@0.2.5:
     readable-stream "1.1.x"
     streamsearch "0.1.2"
 
-duniter@^1.6.21:
+duniter@1.6.x:
   version "1.6.21"
   resolved "https://registry.yarnpkg.com/duniter/-/duniter-1.6.21.tgz#662a2726d4fec55798b8dc9e1cc6f67432273ce6"
   dependencies:
@@ -552,6 +560,7 @@ duniter@^1.6.21:
     request-promise "4.2.0"
     scryptb "6.0.5"
     seedrandom "^2.4.3"
+    sha1 "1.1.1"
     socks-proxy-agent "^3.0.1"
     sqlite3 "3.1.13"
     tail "^1.2.1"
@@ -1903,6 +1912,13 @@ setprototypeof@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.0.3.tgz#66567e37043eeb4f04d91bd658c0cbefb55b8e04"
 
+sha1@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/sha1/-/sha1-1.1.1.tgz#addaa7a93168f393f19eb2b15091618e2700f848"
+  dependencies:
+    charenc ">= 0.0.1"
+    crypt ">= 0.0.1"
+
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
@@ -2262,8 +2278,8 @@ wordwrap@~0.0.2:
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
 
 wotb@^0.6.4:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/wotb/-/wotb-0.6.4.tgz#2ff7020031198ebe9d6e115a898b554940aec3e9"
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/wotb/-/wotb-0.6.5.tgz#31ed24d10713546aa1f0faf5caee9c6d665374ec"
   dependencies:
     bindings "1.2.1"
     nan "2.2.0"
