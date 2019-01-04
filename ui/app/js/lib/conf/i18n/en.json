@@ -16,5 +16,6 @@
   "main.main.card.to_distribute_unit": "days",
   "main.main.card.to_distribute_days": ").",
   "main.main.card.feed": "Send money to ",
-  "main.main.card.to_increase_stock": " for the remuneration to continue after this delay!"
+  "main.main.card.to_increase_stock": " for the remuneration to continue after this delay!",
+  "main.current.title": "Current block"
 }

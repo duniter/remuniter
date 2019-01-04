@@ -16,5 +16,6 @@
   "main.main.card.to_distribute_unit": "jours",
   "main.main.card.to_distribute_days": ").",
   "main.main.card.feed": "Envoyez de la monnaie à la clé ",
-  "main.main.card.to_increase_stock": " pour que la distribution perdure passé ce délai !"
+  "main.main.card.to_increase_stock": " pour que la distribution perdure passé ce délai !",
+  "main.current.title": "Bloc courant"
 }

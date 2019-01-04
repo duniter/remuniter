@@ -39,6 +39,14 @@ div.home-main
             p
               h5.paid.right.chip(ng-if="user.paid")
                 span.amount {{ 'main.earned' | translate }} {{ (user.paid / 100).toFixed(2) }} {{ unit }}
+        ul.collection.with-header(ng-if="current")
+          li.collection-header: h4 {{ 'main.current.title' | translate }}
+          li.collection-item.avatar
+            i.fa.fa-cube
+            span.block-title Current block {{ '#' + current.number + '-' + current.hash.slice(0, 12) }}
+            p
+              span.issuer-title Issuer:&nbsp;
+              span.issuer {{ current.uid }}
         ul.collection.with-header
           li.collection-header: h4 {{ 'main.blocks.title' | translate }}
           li.collection-item.avatar(ng-repeat="b in blocks | orderBy : 'number' : true")
