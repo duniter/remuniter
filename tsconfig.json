@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es2017",
+    "declaration": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "index.ts",
+    "lib/"
+  ],
+  "compileOnSave": true
+}

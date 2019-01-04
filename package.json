@@ -4,16 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepublish": "tsc",
+    "tsc": "tsc",
+    "tscw": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "brunch": "cd ui node && npm install && npm run-script brunch",
     "brunch-build": "cd ui node && npm run-script brunch-build",
     "brunch-w": "cd ui node && npm run-script brunch-w"
   },
   "dependencies": {
+    "@types/node": "^8.0.9",
     "body-parser": "1.15.1",
     "co": "4.6.0",
     "commander": "2.9.0",
-    "duniter": "~1.6.29",
+    "duniter": "~1.7.8",
     "event-stream": "3.3.2",
     "express": "4.13.4",
     "http": "0.0.0",
@@ -21,6 +25,7 @@
     "node-pre-gyp": "^0.6.32",
     "q": "1.4.1",
     "request-promise": "3.0.0",
+    "typescript": "^3.1.6",
     "underscore": "1.8.3",
     "ws": "1.1.0"
   },

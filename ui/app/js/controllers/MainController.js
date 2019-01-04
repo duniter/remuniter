@@ -24,6 +24,7 @@ module.exports = ($scope, $http, $state, WS, issuersTranslation, blocksTranslati
     $scope.top2 = data.top2;
     $scope.topgifts = data.topgifts;
     $scope.digits = data.topgifts.reduce((max, gift) => Math.max(max, String(gift.amount).length), 3) + 1;
+    $scope.current = data.current;
     try {
       $scope.$apply();
     } catch (e) {
