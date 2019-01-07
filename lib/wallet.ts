@@ -259,6 +259,14 @@ export function wallet(duniterServer: Server, payperblock: number) {
         'ORDER BY t.block_number DESC ' +
         'LIMIT 5', ['%SIG(' + remuniterPubkey + ')%', '["' + remuniterPubkey + '"]']);
       console.log(txs);
+      txs.forEach(tx => {
+        tx.issuers = JSON.parse(tx.issuers as any)
+        tx.inputs = JSON.parse(tx.inputs as any)
+        tx.outputs = JSON.parse(tx.outputs as any)
+        tx.recipients = JSON.parse(tx.recipients as any)
+        tx.signatures = JSON.parse(tx.signatures as any)
+        tx.unlocks = JSON.parse(tx.unlocks as any)
+      })
       const enriched = await Promise.all(txs.map(async (tx: DBTx) => {
         let issuer = 'unknown';
         let amount = 0;
@@ -277,7 +285,7 @@ export function wallet(duniterServer: Server, payperblock: number) {
         let date = moment(block.medianTime * 1000).format('YYYY-MM-DD HH:mm');
         if (tx.issuers.length === 1) {
           issuer = tx.issuers[0];
-          const member = await duniterServer.dal.getWrittenIdtyByPubkeyForUidAndPubkey(issuer);
+          const member = (await duniterServer.dal.searchJustIdentities(issuer))[0]
           if (member) {
             issuer = member.uid;
           } else {
