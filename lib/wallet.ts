@@ -230,7 +230,7 @@ export function wallet(duniterServer: Server, payperblock: number) {
           blockstamp: [current.number, current.hash].join('-'),
           locktime: 0,
           issuers: [remuniterPubkey],
-          inputs: sources.map((src) => [src.amount, src.base, src.type, src.identifier, (src as any).pos].join(':')),
+          inputs: sources.map((src) => [src.amount, src.base, src.type, src.identifier, src.noffset].join(':')),
           unlocks: sources.map((src, index) => [index, 'SIG(0)'].join(':')),
           outputs: outputsOfRests.concat(outputsToIssuers).concat([availableMoney - reallyPaid, maxBase, 'SIG(' + remuniterPubkey + ')'].join(':')),
           comment: ['REMU', fromBlock, toBlock].join(':'),

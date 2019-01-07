@@ -1,18 +1,13 @@
 import {Server} from "duniter/server"
 import {DBBlock} from "duniter/app/lib/db/DBBlock"
 import {wallet} from './wallet'
-import {webserver} from './webserver'
 import {DBTx} from "duniter/app/lib/db/DBTx"
 import {getTxsDAL} from './sqlAbstraction'
 
 /****************************
  * Main algorithm
  */
-export async function main(duniterServer: Server, host: string, port: number, payperiod: number, paychunk: number, paystart: number, payperblock: number): Promise<void> {
-
-  // Remuniter UI
-  let httpServer = webserver(host, port, duniterServer, payperblock);
-  await httpServer.openConnection();
+export async function main(duniterServer: Server, payperiod: number, paychunk: number, paystart: number, payperblock: number): Promise<void> {
 
   // Wallet usage
   let remuWallet = wallet(duniterServer, payperblock);
@@ -93,6 +88,6 @@ export async function main(duniterServer: Server, host: string, port: number, pa
 
   if (payperiod) {
     setInterval(pay, payperiod * 1000);
-    pay();
+    await pay();
   }
 }

@@ -2,6 +2,7 @@ import {Statics} from 'duniter'
 import {Server} from 'duniter/server';
 import {ConfDTO} from 'duniter/app/lib/dto/ConfDTO';
 import {main} from './lib/main'
+import {webserver} from './lib/webserver'
 
 /****************************************
  * TECHNICAL CONFIGURATION
@@ -78,7 +79,13 @@ const stack = Statics.autoStack([{
 
           // Remuniter
           try {
-            await main(server, SERVER_HOST, SERVER_PORT, payperiod, paychunk, paystart, payperblock);
+
+            // Remuniter UI
+            let httpServer = webserver(SERVER_HOST, SERVER_PORT, server, payperblock);
+            await httpServer.openConnection();
+
+            // Remuniter Pay loop
+            await main(server, payperiod, paychunk, paystart, payperblock);
           } catch (err) {
             console.error(err.stack || err)
           }

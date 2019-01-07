@@ -13,7 +13,8 @@
   },
   "include": [
     "index.ts",
-    "lib/"
+    "lib/",
+    "test/"
   ],
   "compileOnSave": true
 }
