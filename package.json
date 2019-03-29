@@ -18,7 +18,7 @@
     "body-parser": "1.15.1",
     "co": "4.6.0",
     "commander": "2.9.0",
-    "duniter": "~1.7.8",
+    "duniter": "~1.7.14",
     "event-stream": "^4.0.1",
     "express": "4.13.4",
     "http": "0.0.0",
